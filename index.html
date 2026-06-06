@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div id="logo">DK TANOLI RENT A CAR</div>
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#cars">Cars</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            </div>
+    </section>
+
+    <div class="banner">
+        <h1>DK TANOLI RENT A CAR</h1>
+        <p>Rent your dream car today!</p>
+    </div>
+
+   <div id="about" class="container image-section text-center">
+    <h2 class="about-title">About Us</h2>
+    
+    <p class="about-description">
+        Welcome to <strong>DK TANOLI RENT A CAR</strong>. We offer premium, comfortable, and reliable car rental services in Karachi. Whether you need a luxury sedan for an event or a powerful SUV for travel, we have the perfect ride for you at affordable rates.
+    </p>
+
+    <div class="row g-4 text-start">
+        <div class="col-md-4 col-sm-6">
+            <div class="image-card">
+                <img src="image/audiA6.jpeg" alt="Audi A6">
+                <div class="card-body-custom">
+                    <h5>Audi A6</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="image-card">
+                <img src="image/sonata.jpeg" alt="Hyundai Sonata">
+                <div class="card-body-custom">
+                    <h5>Hyundai Sonata</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="image-card">
+                <img src="image/mercades.jpeg" alt="Mercedes">
+                <div class="card-body-custom">
+                    <h5>Mercedes Benz</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="image-card">
+                <img src="image/WhatsApp Image 2026-01-29 at 1.47.42 PM (13).jpeg" alt="Luxury Car">
+                <div class="card-body-custom">
+                    <h5>Premium Sedan</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="image-card">
+                <img src="image/WhatsApp Image 2026-01-29 at 1.47.42 PM (11).jpeg" alt="Executive Car">
+                <div class="card-body-custom">
+                    <h5>Executive Ride</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="image-card">
+                <img src="image/revo.jpeg" alt="Toyota Revo">
+                <div class="card-body-custom">
+                    <h5>Toyota Hilux Revo</h5>
+                </div>
+            </div>
+        </div>
+        </div> 
+
+        <div class="text-center mt-5">
+    <a href="cars.html" target="_blank" class="more-cars-btn">
+        View More Cars <span>→</span>
+    </a>
+</div>
+    </div>
+
+    </div>
+</div>
+  <section id="contact" class="contact-section">
+    <h1>Contact Us</h1>
+    <p class="contact-sub">
+        Get in touch with us for car booking and inquiries
+    </p>
+
+    <div class="contact-wrapper">
+        </div>
+</section>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2>DK tanoli Rent a Car</h2>
+                <p><strong>📍 Address:</strong> Karachi, Pakistan</p>
+                <p><strong>📞 Phone:</strong> 03240892655</p>
+                <p><strong>💬 WhatsApp:</strong> 03240892655</p>
+
+                <a class="whatsapp-btn" href="https://wa.me/923240892655" target="_blank">
+    Chat on WhatsApp
+</a>
+                </a>
+            </div>
+
+            <div class="contact-form">
+                <form onsubmit="sendToWhatsapp(event)">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" placeholder="Phone Number" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function sendToWhatsapp(event) {
+            event.preventDefault();
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let message = document.getElementById('message').value;
+let whatsappNumber = "923240892655";
+            
+            let url = "https://wa.me/" + whatsappNumber + "?text=" 
+                + "*Name:* " + encodeURIComponent(name) + "%0A"
+                + "*Email:* " + encodeURIComponent(email) + "%0A"
+                + "*Phone:* " + encodeURIComponent(phone) + "%0A"
+                + "*Message:* " + encodeURIComponent(message);
+
+            
+            if (name.trim() !== "" && phone.trim() !== "") {
+                window.open(url, '_blank').focus();
+            } else {
+                alert("Plz Name aur Phone number lazmi bharein!");
+            }
+        }
+    </script>
+</body>
+
+</html>
